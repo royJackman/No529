@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\menu.png",
+        "source": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\icon.png",
+        "source": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\background.png",
+        "source": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\logo.png",
+        "source": "C:\\Users\\timmy\\Desktop\\320Proj\\sampleUI\\UI\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
+    }
+]
