@@ -1,6 +1,6 @@
 const observableModule = require("data/observable");
 
-function SearchViewModel() {
+function SearchResultsViewModel() {
     const viewModel = observableModule.fromObject({
 
     });
@@ -8,4 +8,4 @@ function SearchViewModel() {
     return viewModel;
 }
 
-module.exports = SearchViewModel;
+module.exports = SearchResultsViewModel;
