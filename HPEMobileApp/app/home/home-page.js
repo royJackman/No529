@@ -29,5 +29,29 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+function buttonTap1(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/graph1-page");
+}
+
+function buttonTap2(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/graph2-page");
+}
+
+function buttonTap3(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/graph3-page");
+}
+
+function buttonTap4(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/graph4-page");
+}
+
+exports.buttonTap1 = buttonTap1;
+exports.buttonTap2 = buttonTap2;
+exports.buttonTap3 = buttonTap3;
+exports.buttonTap4 = buttonTap4;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
