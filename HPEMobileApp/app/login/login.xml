@@ -1,0 +1,29 @@
+<Page loaded='loaded'
+      class='page'
+      navigatingTo='onNavigatingTo'
+      xmlns:nsDrawer='nativescript-pro-ui/sidedrawer'
+      xmlns:myDrawer='shared/my-drawer'
+      xmlns='http://www.nativescript.org/tns.xsd'>
+
+    <ActionBar class='action-bar'>
+        <Label class='action-bar-title' text='Log In'></Label>
+    </ActionBar>
+
+    <StackLayout orientation='vertical'>
+      <Image src='images/logo.png'></Image>
+
+      <TextField id='email'
+                 hint='Email Address'
+                 keyboardType='email'
+                 autocorrect='false'
+                 autocapitalizationType='none'>
+      </TextField>
+
+      <TextField id='password'
+                 hint='Password'
+                 secure='true'>
+      </TextField>
+
+      <Button text='Login' tap='login' class='login-button'></Button>
+    </StackLayout>
+</Page>

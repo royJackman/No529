@@ -1,6 +1,9 @@
 const frameModule = require("ui/frame");
-
 const LoginViewModel = require("./login-view-model");
+
+var page;
+var email;
+var password;
 
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -29,10 +32,16 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
-function loginTap(args) {
-    var topmost = frameModule.topmost();
-    topmost.navigate("views/register/register");
-}
-
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+
+exports.loaded = function(args) {
+    page = args.object;
+};
+
+exports.login = function() {
+    email = page.getViewById('email');
+    console.log(email.text)
+    var topmost = frameModule.topmost();
+    topmost.navigate('home/home-page');
+};
