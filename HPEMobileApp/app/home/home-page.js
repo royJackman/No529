@@ -29,29 +29,29 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
-function buttonTap1(args) {
+function avgGraphButton(args) {
     var topmost = frameModule.topmost();
-    topmost.navigate("graph/graph1-page");
+    topmost.navigate("graph/avgGraph-page");
 }
 
-function buttonTap2(args) {
+function histCapButton(args) {
     var topmost = frameModule.topmost();
-    topmost.navigate("graph/graph2-page");
+    topmost.navigate("graph/histCap-page");
 }
 
-function buttonTap3(args) {
+function hpeParModelButton(args) {
     var topmost = frameModule.topmost();
-    topmost.navigate("graph/graph3-page");
+    topmost.navigate("graph/hpeParModel-page");
 }
 
-function buttonTap4(args) {
+function lastPortalButton(args) {
     var topmost = frameModule.topmost();
-    topmost.navigate("graph/graph4-page");
+    topmost.navigate("graph/lastPortal-page");
 }
 
-exports.buttonTap1 = buttonTap1;
-exports.buttonTap2 = buttonTap2;
-exports.buttonTap3 = buttonTap3;
-exports.buttonTap4 = buttonTap4;
+exports.avgGraphButton = avgGraphButton;
+exports.histCapButton = histCapButton;
+exports.hpeParModelButton = hpeParModelButton;
+exports.lastPortalButton = lastPortalButton;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
