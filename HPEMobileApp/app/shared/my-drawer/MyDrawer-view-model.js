@@ -39,18 +39,18 @@ function MyDrawerViewModel(selectedPage) {
                 isSelected: selectedPage === "Featured"
             },
             {
+                title: "Detail configuration",
+                name: "configuration",
+                route: "configuration/configuration-page",
+                icon: "\uf005",
+                isSelected: selectedPage === "Configuration"
+            },
+            {
                 title: "Settings",
                 name: "settings",
                 route: "settings/settings-page",
                 icon: "\uf013",
                 isSelected: selectedPage === "Settings"
-            },
-            {
-                title: "Log Out",
-                name: "logout",
-                route: "login/login-page",
-                icon: "\uf08b",
-                isSelected: selectedPage === "Login"
             }
         ]
     });
