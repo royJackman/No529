@@ -29,5 +29,29 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+function avgGraphButton(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/avgGraph-page");
+}
+
+function histCapButton(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/histCap-page");
+}
+
+function hpeParModelButton(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/hpeParModel-page");
+}
+
+function lastPortalButton(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/lastPortal-page");
+}
+
+exports.avgGraphButton = avgGraphButton;
+exports.histCapButton = histCapButton;
+exports.hpeParModelButton = hpeParModelButton;
+exports.lastPortalButton = lastPortalButton;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
