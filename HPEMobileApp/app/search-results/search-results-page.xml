@@ -57,41 +57,8 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout class="page-content" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto" columns="*">
-                <Label class="search-title" row="0" text="Please fill one or more field:" />
-                <GridLayout class="search-item" row="1" columns="auto, *" >
-                    <Label class="search-field-label" text="System Name:" col="0" /> 
-                    <TextField class="search-field" text="{{ system_ID }}" hint="e.g. My System" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="2" columns="auto, *" >
-                    <Label class="search-field-label" text="Company:" col="0" /> 
-                    <TextField class="search-field" text="{{ company }}" hint="e.g. Hewlett Packard Enterprise" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="3" columns="auto, *" >
-                    <Label class="search-field-label" text="Serial #:" col="0" /> 
-                    <TextField class="search-field" text="{{ serial_Num }}" hint="e.g. 1234" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="4" columns="auto, *" >
-                    <Label class="search-field-label" text="Product Family:" col="0" /> 
-                    <TextField class="search-field" text="{{ prod_family }}" hint="e.g. '7000'" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="5" columns="auto, *" >
-                    <Label class="search-field-label" text="Model:" col="0" /> 
-                    <TextField class="search-field" text="{{ model }}" hint="e.g. '7200c'" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="6" columns="auto, *" >
-                    <Label class="search-field-label" text="OS Version:" col="0" /> 
-                    <TextField class="search-field" text="{{ osVersion }}" hint="e.g. '3.2.2.530'" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="7" columns="auto, *" >
-                    <Label class="search-field-label" text="Region:" col="0" /> 
-                    <TextField class="search-field" text="{{ region }}" hint="e.g. Americas" col="1" />
-                </GridLayout>
-                <GridLayout class="search-item" row="8" columns="auto, *" >
-                    <Label class="search-field-label" text="Country:" col="0" /> 
-                    <TextField class="search-field" text="{{ country }}" hint="e.g. US" col="1" />
-                </GridLayout>
-                <Button class="page-search-button but" text="Search" tap="search" row="9" />
+            <GridLayout class="page-content" rows="auto" columns="*">
+                <Button class="page-newSearch-button but" text="New Search" tap="newSearch" row="0" />
                 <!--<ListView class="page-search-results" items="{{ searchResults }}" id="searchResults" row="1" colSpan="2">
                     <ListView.itemTemplate>
                         <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>

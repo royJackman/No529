@@ -1,6 +1,6 @@
 const frameModule = require("ui/frame");
 
-const SearchViewModel = require("./search-view-model");
+const SearchResultsViewModel = require("./search-results-view-model");
 
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -16,7 +16,7 @@ function onNavigatingTo(args) {
     }
 
     const page = args.object;
-    page.bindingContext = new SearchViewModel();
+    page.bindingContext = new SearchResultsViewModel();
 }
 
 /* ***********************************************************
@@ -29,10 +29,10 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
-function search(){
-    frameModule.topmost().navigate("search-results/search-results-page");
+function newSearch(){
+    frameModule.topmost().navigate("search/search-page");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
-exports.search = search;
+exports.newSearch = newSearch;
