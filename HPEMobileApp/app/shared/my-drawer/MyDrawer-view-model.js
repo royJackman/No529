@@ -51,7 +51,15 @@ function MyDrawerViewModel(selectedPage) {
                 route: "settings/settings-page",
                 icon: "\uf013",
                 isSelected: selectedPage === "Settings"
-            }
+            
+             },
+            {
+                title: "Log Out",
+                name: "logout",
+                route: "login/login-page",
+                icon: "\uf08b",
+                isSelected: selectedPage === "Login"
+            },
         ]
     });
 
