@@ -1,0 +1,120 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+    xmlns:myDrawer="shared/my-drawer"
+    xmlns="http://www.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android because ActionItems are shown on the right side of the ActionBar
+        -->
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <!-- 
+        Use the ActionItem for IOS with position set to left. Using the NavigationButton as a side-drawer button in iOS is not possible, because its function is to always navigate back in the application.
+        -->
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left">
+        </ActionItem>
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+    <!--
+    RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+    Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+    http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawer/getting-started
+    The RadSideDrawer component is designed to be used as a root element to the <Page> and
+    it shouldn't have any other siblings other than the <ActionBar> component.
+    -->
+    <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+        <!--
+        Use the RadSideDrawer.drawerTransition component to change the open/close animation of the drawer.
+        -->
+        <nsDrawer:RadSideDrawer.drawerTransition>
+            <nsDrawer:SlideInOnTopTransition/>
+        </nsDrawer:RadSideDrawer.drawerTransition>
+
+        <!--
+        Use the RadSideDrawer.drawerContent component to display the content of the app drawer on this page.
+        Always wrap content in a layout component.
+        -->
+        <nsDrawer:RadSideDrawer.drawerContent>
+            <StackLayout>
+                <!--
+                Use {N} custom components to reuse UI across your mobile app.
+                The MyDrawer custom component defined in "/shared/my-drawer" holds the contents of the app drawer.
+                Learn more about custom components and how they can be used in this documentation article:
+                http://docs.nativescript.org/ui/basics#custom-components
+                -->
+                <myDrawer:MyDrawer selectedPage="Home"/>
+            </StackLayout>
+        </nsDrawer:RadSideDrawer.drawerContent>
+
+        <!--
+        Use the RadSideDrawer.mainContent component to display the content of the page when you have an app drawer.
+        Always wrap content in a layout component.
+        -->
+        <nsDrawer:RadSideDrawer.mainContent>
+              <GridLayout loaded="rootGridLoaded">
+    <TabView id="tabView" 
+        selectedIndexChanged="selectedIndexChanged"
+        selectedIndex="{{ selectedIndex }}" 
+        tabBackgroundColor="#31bcff"
+        android:class="android-tab-view" 
+        android:androidSelectedTabHighlightColor="#455b66"
+        ios:class="ios-tab-view"
+        ios:selectedTabTextColor="white">
+      <TabView.items>
+        <TabViewItem ios:title="One" iconSource="{{ selectedIndex == 1 ? 'res://grid1' : 'res://grid' }}">
+          <TabViewItem.view>
+            <StackLayout>
+                <Label text="One" android:class="android-label" ios:class="ios-label"/>
+                <GridLayout columns="*,*" rows="*,*,*,*,*" ios:class="layout-container" android:class="android-layout-container">
+                    <Button id="1btn-blue" rowSpan="2" class="btn-blue" tap="buttonTap"/>
+                    <Button id="1btn-lightblue" col="1" rowSpan="4" class="btn-lightblue" tap="buttonTap"/>
+                    <Button id="1btn-red" col="0" row="2" class="btn-red" tap="buttonTap"/>
+                    <Button id="1btn-yellow" col="0" row="3" class="btn-yellow" tap="buttonTap"/>
+                    <Button id="1btn-lightgreen" col="0" row="4" colSpan="2" class="btn-lightgreen" tap="buttonTap"/> 
+                </GridLayout>
+            </StackLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+
+        <TabViewItem ios:title="Two" iconSource="{{ selectedIndex == 1 ? 'res://grid1' : 'res://grid' }}">
+          <TabViewItem.view>
+            <StackLayout>
+                <Label text="Two" android:class="android-label" ios:class="ios-label"/>
+                <GridLayout columns="*,*" rows="*,*,*,*,*" ios:class="layout-container" android:class="android-layout-container">
+                    <Button id="1btn-lightgreen" col="0" row="4" colSpan="2" class="btn-lightgreen" tap="buttonTap"/> 
+                    <Button id="1btn-lightblue" col="1" rowSpan="4" class="btn-lightblue" tap="buttonTap"/>
+                    <Button id="1btn-red" col="0" row="2" class="btn-red" tap="buttonTap"/>
+                    <Button id="1btn-blue" rowSpan="2" class="btn-blue" tap="buttonTap"/>
+                    <Button id="1btn-yellow" col="0" row="3" class="btn-yellow" tap="buttonTap"/>
+                </GridLayout>
+            </StackLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+
+        <TabViewItem ios:title="Three" iconSource="{{ selectedIndex == 3 ? 'res://dock1' : 'res://dock' }}">
+          <TabViewItem.view>
+            <GridLayout rows="auto,*">
+                <Label row="0" text="Three" android:class="android-label" ios:class="ios-label"/>
+                <DockLayout row="1" stretchLastChild="true" ios:class="layout-container" android:class="android-layout-container">
+                    <Button id="3btn-red" dock="left" class="btn-red" width="80" tap="buttonTap"/>
+                    <Button id="3btn-lightblue" dock="top" class="btn-lightblue" height="80" tap="buttonTap"/>
+                    <Button id="3btn-lightgreen" dock="right" class="btn-lightgreen" width="80" tap="buttonTap"/>
+                    <Button id="3btn-yellow" dock="bottom" class="btn-yellow" height="80" tap="buttonTap"/>
+                    <Button id="3btn-blue" class="btn-blue" />
+                </DockLayout>
+            </GridLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+
+      </TabView.items>
+    </TabView>
+  </GridLayout>
+        </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
+</Page>

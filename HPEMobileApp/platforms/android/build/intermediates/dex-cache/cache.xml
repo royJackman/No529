@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-recyclerview-v7-26.0.0-alpha1_a307465ab473918fd64eb06185d36327af732cb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Sample\runtime\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="eb6078500d1af5e7b663871706674405c57292a3">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\Sample-runtime-unspecified_21ccda5eda62d8cbaf5d04ee5cbaf7414996a845.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\design\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-design-26.0.0-alpha1_3c0e2dce1c43b0f338521c282c0526c7eae1bdca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="763441cc6a990002aed18218e3bb277961816ea4">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Gauges-2017.1.1003-dev-release_36235b7a0a0c716d187e9a70574b8aec0d8bf8ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Common-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="29bb374c9fd569ea5fad2e6729c255c3717382c9">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Common-2017.1.1003-dev-release_6199b718dfbd8e6d569d8805f5fb0dddd7edcbc5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-media-compat-26.0.0-alpha1_ba40d1e9651e8597d830d17f74bc604917d66a20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-utils-26.0.0-alpha1_5116ff8cc081b70bf31ad884efad3305122b7c42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\List-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ccf00b7aa2472bfe1e92931c49e46d9103742149">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-List-2017.1.1003-dev-release_53d15521fb6070c5e2b2741d2d7f0cf1dd6c7a16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-appcompat-v7-26.0.0-alpha1_b87b08c3251252a6b88099432a7a0fdf02d5d1f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Input-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7279ec5fcf43856d4563c37f6b911e6289500106">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Input-2017.1.1003-dev-release_983ae8380362b97ed8cba52dab3004dda8e6d3b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-transition-26.0.0-alpha1_403860ec5385470bb6aeafbb073367e6726ec44b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Data-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a690a9ad791e20a8e6bfa1f39c4df912499d2472">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Data-2017.1.1003-dev-release_e0965259df09575a19875a47dc642b33c8ca68c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-fragment-26.0.0-alpha1_619a5f2dc3896812a339fe7a78444731c512c3ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-vector-drawable-26.0.0-alpha1_5256c3731d91ca025ba4a3a0b475aa41505bd360.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\support-annotations-26.0.0-alpha1_7c88aee63584960575018a7d0454b660043aaeb4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-v4-26.0.0-alpha1_25e35df295b388a1981345ea527cd68cd89c6d75.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-animated-vector-drawable-26.0.0-alpha1_1bffc9c38f30a72a6c7c566168f40c46d3062277.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-compat-26.0.0-alpha1_5662710854ae3aba210fa4561c7aea7d94b50499.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Feedback-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="99917b3cc83bb26c61fe0fa886ef55ee8005e9bf">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Feedback-2017.1.1003-dev-release_94153c6896b37c831b2033e7b64128d292655290.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-widgets-release_b9443509878510e0078bd8e0b79d1260bad1d3e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Sample\runtime\unspecified\jars\libs\binding-generator.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a3e74f5f1ebe12c7cfa6591158ef298c95a5275f">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\binding-generator_7a74d074d253646c2df268df8ed2a019ce032053.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dea5032193895bd143e997736b2842b1dffd1dcf">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Primitives-2017.1.1003-dev-release_16b3649d6c322ffaff66136b68d30a0c252f5156.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1003-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="669d0795783c3d477c08aa18fb0457829a1292ac">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Chart-2017.1.1003-dev-release_d69cdae77e262e25b47979056118c69225120ecd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\timmy\Desktop\320Proj\sampleUI\UI\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-ui-26.0.0-alpha1_85f0f64c71a63d4721c503da3eb46c7d86c7b3c5.jar" />
+    </item>
+
+</items>
