@@ -18,25 +18,11 @@ function MyDrawerViewModel(selectedPage) {
                 isSelected: selectedPage === "Home"
             },
             {
-                title: "Browse",
-                name: "browse",
-                route: "browse/browse-page",
-                icon: "\uf1ea",
-                isSelected: selectedPage === "Browse"
-            },
-            {
                 title: "Search",
                 name: "search",
                 route: "search/search-page",
                 icon: "\uf002",
                 isSelected: selectedPage === "Search"
-            },
-            {
-                title: "Featured",
-                name: "featured",
-                route: "featured/featured-page",
-                icon: "\uf005",
-                isSelected: selectedPage === "Featured"
             },
             {
                 title: "Settings",
@@ -48,7 +34,7 @@ function MyDrawerViewModel(selectedPage) {
             {
                 title: "Log Out",
                 name: "logout",
-                route: "login/login-page",
+                route: "login/login",
                 icon: "\uf08b",
                 isSelected: selectedPage === "Login"
             }
