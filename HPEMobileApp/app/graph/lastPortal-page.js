@@ -2,6 +2,14 @@ const frameModule = require("ui/frame");
 
 const GraphViewModel = require("./graph-view-model");
 
+var Observable = require("data/observable").Observable;
+
+var pageData = new Observable();
+pageData.typeData = [
+  { type:"SystemA", count: 59 }, { type:"SystemB", count: 84 }, { type: "SystemC",count: 56 },
+  { type: "SystemD", count: 90 }, { type:"SystemE", count: 118 },{ type: "SystemF", count: 66 },
+];
+
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
@@ -37,3 +45,7 @@ function goBackPage(args) {
 exports.goBackPage = goBackPage;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.pageLoaded = function(args) {
+    var page = args.object;
+    page.bindingContext = pageData;
+  };
