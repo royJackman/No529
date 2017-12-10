@@ -1,8 +1,22 @@
-const frameModule = require("ui/frame");
-
+var frameModule = require("ui/frame");
+var Observable = require("data/observable").Observable;
 const GraphViewModel = require("./graph-view-model");
 
-/* ***********************************************************
+var pageData = new Observable();
+pageData.data = [
+  { key: "April '17", value: 7.3 },
+  { key: "Two", value: 5.0 },
+  { key: "July '17", value: 6.2 },
+  { key: "", value: 2.5 },
+  { key: "", value: 3.9 }
+];
+exports.pageLoaded = function(args) {
+  var page = args.object;
+  page.bindingContext = pageData;
+};
+
+
+/************************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
 function onNavigatingTo(args) {
