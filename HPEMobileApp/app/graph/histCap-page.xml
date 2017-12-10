@@ -1,0 +1,49 @@
+<Page 
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:chart="nativescript-pro-ui/chart"
+  class="page" loaded="pageLoaded">
+  navigatingTo="onNavigatingTo"  
+  xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+  xmlns:myDrawer="shared/my-drawer"
+
+  
+    <ActionBar class="action-bar" backgroundColor="red">
+
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onBackTap"
+            ios.position="left">
+        </ActionItem>
+        
+        <Label class="action-bar-title" text="Graph Details"></Label>
+    
+    </ActionBar>
+
+
+   <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+
+  <StackLayout class="p-20">
+    <Label class="h1" text="Historical Capacity"></Label>
+
+    <chart:RadCartesianChart class="m-t-10" height="500">
+      <chart:RadCartesianChart.series>
+        <chart:LineSeries
+          items="{{ animeData }}"
+          categoryProperty="season"
+          valueProperty="count">
+          <chart:LineSeries.horizontalAxis>
+            <chart:CategoricalAxis labelFitMode="Rotate" />
+          </chart:LineSeries.horizontalAxis>
+          <chart:LineSeries.verticalAxis>
+            <chart:LinearAxis labelLayoutMode="Outer" />
+          </chart:LineSeries.verticalAxis>
+        </chart:LineSeries>
+      </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
+  </StackLayout>
+
+
+</Page>

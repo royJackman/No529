@@ -1,0 +1,46 @@
+<Page 
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:chart="nativescript-pro-ui/chart"
+  class="page" loaded="pageLoaded">
+  navigatingTo="onNavigatingTo"  
+  xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+  xmlns:myDrawer="shared/my-drawer"
+
+  
+    <ActionBar class="action-bar" backgroundColor="purple">
+
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onBackTap"
+            ios.position="left">
+        </ActionItem>
+        
+        <Label class="action-bar-title" text="Average Graph"></Label>
+    
+    </ActionBar>
+
+
+   <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+
+  <StackLayout class="p-20">
+  <Label class="h2" text="Average Front-End Performance"></Label>
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
+            <chart:SplineSeries items="{{ data }}" categoryProperty="key" valueProperty="value">
+
+                <chart:SplineSeries.horizontalAxis>
+                    <chart:CategoricalAxis/>
+                </chart:SplineSeries.horizontalAxis>
+                <chart:SplineSeries.verticalAxis>
+                    <chart:LinearAxis/>
+                </chart:SplineSeries.verticalAxis>
+            </chart:SplineSeries>
+        </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
+  </StackLayout>
+
+
+</Page>

@@ -1,0 +1,50 @@
+<Page 
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:chart="nativescript-pro-ui/chart"
+  class="page" loaded="pageLoaded">
+  navigatingTo="onNavigatingTo"  
+  xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+  xmlns:myDrawer="shared/my-drawer"
+
+  
+    <ActionBar class="action-bar" backgroundColor="green">
+
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onBackTap"
+            ios.position="left">
+        </ActionItem>
+        
+        <Label class="action-bar-title" text="Graph Details"></Label>
+    
+    </ActionBar>
+
+
+   <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+
+  <StackLayout class="p-20">
+    <Label class="h1" text="Last Portal Update"></Label>
+
+    <chart:RadCartesianChart class="m-t-5" height="500">
+      <chart:RadCartesianChart.series>
+        <chart:BarSeries
+          items="{{ typeData }}"
+          categoryProperty="type"
+          valueProperty="count"
+          showLabels="false">
+          <chart:BarSeries.horizontalAxis>
+  <chart:CategoricalAxis labelFitMode="Rotate" />
+</chart:BarSeries.horizontalAxis>
+<chart:BarSeries.verticalAxis>
+  <chart:LinearAxis />
+</chart:BarSeries.verticalAxis>
+        </chart:BarSeries>
+      </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
+  </StackLayout>
+
+
+</Page>

@@ -72,10 +72,10 @@
             <StackLayout>
                 <Label text="One" android:class="android-label" ios:class="ios-label"/>
                 <GridLayout columns="*,*" rows="*,*,*,*,*" ios:class="layout-container" android:class="android-layout-container">
-                    <Button id="1btn-blue" rowSpan="2" class="btn-blue" tap="buttonTap"/>
-                    <Button id="1btn-lightblue" col="1" rowSpan="4" class="btn-lightblue" tap="buttonTap"/>
-                    <Button id="1btn-red" col="0" row="2" class="btn-red" tap="buttonTap"/>
-                    <Button id="1btn-yellow" col="0" row="3" class="btn-yellow" tap="buttonTap"/>
+                    <Button text="Avg Graph" id="1btn-blue" rowSpan="2" class="btn-blue" tap="avgGraphButton"/>
+                    <Button text="Historical Cap" id="1btn-lightblue" col="1" rowSpan="4" class="btn-lightblue" tap="histCapButton"/>
+                    <Button text="HPE 3PAR Model" id="1btn-red" col="0" row="2" class="btn-red" tap="hpeParModelButton"/>
+                    <Button text="Last Portal Update" id="1btn-yellow" col="0" row="3" class="btn-yellow" tap="lastPortalButton"/>
                     <Button id="1btn-lightgreen" col="0" row="4" colSpan="2" class="btn-lightgreen" tap="buttonTap"/> 
                 </GridLayout>
             </StackLayout>

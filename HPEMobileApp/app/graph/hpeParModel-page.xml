@@ -1,0 +1,51 @@
+<Page 
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:chart="nativescript-pro-ui/chart"
+  class="page" loaded="pageLoaded">
+  navigatingTo="onNavigatingTo"  
+  xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+  xmlns:myDrawer="shared/my-drawer"
+
+  
+    <ActionBar class="action-bar" backgroundColor="teal">
+
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onBackTap"
+            ios.position="left">
+        </ActionItem>
+        
+        <Label class="action-bar-title" text="Graph Details"></Label>
+    
+    </ActionBar>
+
+
+   <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBackPage"/>
+
+
+  <StackLayout class="p-20">
+    <Label class="h1" position="Center" text="HPE 3PAR Model"></Label>
+
+    <chart:RadPieChart height="300">
+  <chart:RadPieChart.series>
+    <chart:PieSeries
+      selectionMode="DataPoint"
+      items="{{ generationData }}"
+      outerRadiusFactor="1"
+      valueProperty="count"
+      legendLabel="generation"
+      showLabels="true">
+    </chart:PieSeries>
+  </chart:RadPieChart.series>
+  <chart:RadPieChart.legend>
+    <chart:RadLegendView
+      position="Right"
+      width="120" />
+  </chart:RadPieChart.legend>
+</chart:RadPieChart>
+  </StackLayout>
+
+
+</Page>
