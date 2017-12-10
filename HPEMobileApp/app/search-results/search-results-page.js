@@ -5,6 +5,8 @@ const SearchResultsViewModel = require("./search-results-view-model");
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
+var searchResult = new SearchResultsViewModel();
+
 function onNavigatingTo(args) {
     /* ***********************************************************
     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
@@ -15,8 +17,11 @@ function onNavigatingTo(args) {
         return;
     }
 
+    searchResult.searchRequest = args.context;
+    //console.dir(searchResult.searchRequest);
+
     const page = args.object;
-    page.bindingContext = new SearchResultsViewModel();
+    page.bindingContext = searchResult;
 }
 
 /* ***********************************************************
@@ -33,6 +38,16 @@ function newSearch(){
     frameModule.topmost().navigate("search/search-page");
 }
 
+function editSearch(){
+    var navigationEntry = {
+        moduleName: "search/search-page",
+        context: searchResult.searchRequest,
+        animated: false
+    };
+    frameModule.topmost().navigate(navigationEntry);
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 exports.newSearch = newSearch;
+exports.editSearch = editSearch;

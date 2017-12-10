@@ -16,6 +16,9 @@ function onNavigatingTo(args) {
     if (args.isBackNavigation) {
         return;
     }
+    if (args.context == null){
+        search.empty();
+    }
 
     const page = args.object;
     page.bindingContext = search;
@@ -31,10 +34,15 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
-function search(){
-    frameModule.topmost().navigate("search-results/search-results-page");
+function onSearchTap(){
+    var navigationEntry = {
+        moduleName: "search-results/search-results-page",
+        context: search, 
+        animated: false
+    };
+    frameModule.topmost().navigate(navigationEntry);
 }
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
-exports.search = search;
+exports.onSearchTap = onSearchTap;

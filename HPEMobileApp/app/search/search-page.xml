@@ -91,7 +91,7 @@
                     <Label class="search-field-label" text="Country:" col="0" /> 
                     <TextField class="search-field" text="{{ country }}" hint="e.g. US" col="1" />
                 </GridLayout>
-                <Button class="page-search-button but" text="Search" tap="search" row="9" />
+                <Button class="page-search-button but" text="Search" tap="onSearchTap" row="9" />
                 <!--<ListView class="page-search-results" items="{{ searchResults }}" id="searchResults" row="1" colSpan="2">
                     <ListView.itemTemplate>
                         <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>

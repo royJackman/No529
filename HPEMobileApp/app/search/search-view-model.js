@@ -12,6 +12,17 @@ function SearchViewModel() {
         country: ""
     });
 
+    viewModel.empty = function() {
+        viewModel.system_ID = "";
+        viewModel.company = "";
+        viewModel.serial_Num = "";
+        viewModel.prod_family = "";
+        viewModel.model = "";
+        viewModel.osVersion = "";
+        viewModel.region = "";
+        viewModel.country = "";
+    }; 
+
     return viewModel;
 }
 
