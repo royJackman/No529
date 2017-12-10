@@ -10,7 +10,7 @@
     </ActionBar>
 
     <StackLayout orientation='vertical'>
-      <Image src='images/logo.png'></Image>
+      <Image src="~/images/logo.png" stretch="none" />
 
       <TextField id='email'
                  hint='Email Address'
