@@ -2,6 +2,7 @@ const frameModule = require("ui/frame");
 
 const SearchResultsViewModel = require("./search-results-view-model");
 
+var fetchModule = require("fetch");
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
@@ -17,8 +18,8 @@ function onNavigatingTo(args) {
         return;
     }
 
-    searchResult.searchRequest = args.context;
-    //console.dir(searchResult.searchRequest);
+    searchResult.searchFields = args.context;
+    buildhttpRequest();
 
     const page = args.object;
     page.bindingContext = searchResult;
@@ -41,12 +42,43 @@ function newSearch(){
 function editSearch(){
     var navigationEntry = {
         moduleName: "search/search-page",
-        context: searchResult.searchRequest,
+        context: searchResult.searchFields,
         animated: false
     };
     frameModule.topmost().navigate(navigationEntry);
 }
 
+function getSearchResults() {
+    fetchModule.fetch(searchResult.httpRequest, {
+        method: "GET"
+    })
+    .then(
+        function (response) {
+            searchResult.resultsJSON = response;
+            //alert({ title: "GET Response", message: JSON.stringify(response), okButtonText: "Close" });
+        }, 
+        function (error) {
+            console.log(JSON.stringify(error));
+        }
+    )
+}
+
+function buildhttpRequest() {
+    var first = true;
+    for (var key in searchResult.searchFields){
+        if(searchResult.searchFields.hasOwnProperty(key) && searchResult.searchFields[key] != null){
+            if(first){
+                searchResult.httpRequest += "/search?";
+                first = false;
+            }else{
+                searchResult.httpRequest += "&";
+            }
+            searchResult.httpRequest += key + "=" + searchResult.searchFields[key];
+        }
+    }
+} 
+
+    
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 exports.newSearch = newSearch;

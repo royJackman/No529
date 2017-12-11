@@ -1,10 +1,12 @@
 const observableModule = require("data/observable");
 
-const searchViewModel = require("./../search/search-view-model");
+//const searchViewModel = require("./../search/search-view-model");
 
 function SearchResultsViewModel() {
     const viewModel = observableModule.fromObject({
-        searchRequest: null,
+        searchFields: null,
+        httpRequest: "https://nqexnakqdo.localtunnel.me/systems/Frenzy",
+        resultsJSON: null,
         results: null
     });
 
