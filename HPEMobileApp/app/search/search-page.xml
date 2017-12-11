@@ -61,19 +61,19 @@
                 <Label class="search-title" row="0" text="Please fill one or more field:" />
                 <GridLayout class="search-item" row="1" columns="auto, *" >
                     <Label class="search-field-label" text="System Name:" col="0" /> 
-                    <TextField class="search-field" text="{{ system_ID }}" hint="e.g. My System" col="1" />
+                    <TextField class="search-field" text="{{ systemName }}" hint="e.g. My System" col="1" />
                 </GridLayout>
                 <GridLayout class="search-item" row="2" columns="auto, *" >
                     <Label class="search-field-label" text="Company:" col="0" /> 
-                    <TextField class="search-field" text="{{ company }}" hint="e.g. Hewlett Packard Enterprise" col="1" />
+                    <TextField class="search-field" text="{{ companyName }}" hint="e.g. Hewlett Packard Enterprise" col="1" />
                 </GridLayout>
                 <GridLayout class="search-item" row="3" columns="auto, *" >
                     <Label class="search-field-label" text="Serial #:" col="0" /> 
-                    <TextField class="search-field" text="{{ serial_Num }}" hint="e.g. 1234" col="1" />
+                    <TextField class="search-field" text="{{ serialNumber }}" hint="e.g. 1234" col="1" />
                 </GridLayout>
                 <GridLayout class="search-item" row="4" columns="auto, *" >
                     <Label class="search-field-label" text="Product Family:" col="0" /> 
-                    <TextField class="search-field" text="{{ prod_family }}" hint="e.g. '7000'" col="1" />
+                    <TextField class="search-field" text="{{ productFamily }}" hint="e.g. '7000'" col="1" />
                 </GridLayout>
                 <GridLayout class="search-item" row="5" columns="auto, *" >
                     <Label class="search-field-label" text="Model:" col="0" /> 
@@ -85,11 +85,11 @@
                 </GridLayout>
                 <GridLayout class="search-item" row="7" columns="auto, *" >
                     <Label class="search-field-label" text="Region:" col="0" /> 
-                    <TextField class="search-field" text="{{ region }}" hint="e.g. Americas" col="1" />
+                    <TextField class="search-field" text="{{ location_region }}" hint="e.g. Americas" col="1" />
                 </GridLayout>
                 <GridLayout class="search-item" row="8" columns="auto, *" >
                     <Label class="search-field-label" text="Country:" col="0" /> 
-                    <TextField class="search-field" text="{{ country }}" hint="e.g. US" col="1" />
+                    <TextField class="search-field" text="{{ location_country }}" hint="e.g. US" col="1" />
                 </GridLayout>
                 <Button class="page-search-button but" text="Search" tap="onSearchTap" row="9" />
                 <!--<ListView class="page-search-results" items="{{ searchResults }}" id="searchResults" row="1" colSpan="2">
