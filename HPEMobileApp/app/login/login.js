@@ -1,6 +1,8 @@
 const frameModule = require("ui/frame");
 const LoginViewModel = require("./login-view-model");
+const globalVars = require("./../app.js");
 
+var fetchModule = require("fetch");
 var page;
 var email;
 var password;
@@ -41,7 +43,20 @@ exports.loaded = function(args) {
 
 exports.login = function() {
     email = page.getViewById('email');
+    pword = page.getViewById('password');
     console.log(email.text)
     var topmost = frameModule.topmost();
-    topmost.navigate('home/home-page');
+    if (email.text == "gordon@umass.edu" && pword.text == "packers") {
+        global.companyName = "Frenzy"
+        global.queryStart = global.serverLink + "/systems/" + global.companyName
+        topmost.navigate('home/home-page');
+    }
+    else if (email.text == "tim" && pword.text == "tim"){
+        global.companyName = "Chaos"
+        topmost.navigate('home/home-page');
+        global.queryStart = global.serverLink + "/systems/" + global.companyName
+    }
+    else {
+        alert({ title: "Invalid Credentials", message: "Incorrect Username or Password. Please try again.", okButtonText: "Close" });
+    }
 };
