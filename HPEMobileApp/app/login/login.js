@@ -1,8 +1,6 @@
 const frameModule = require("ui/frame");
 const LoginViewModel = require("./login-view-model");
-const globalVars = require("./../app.js");
 
-var fetchModule = require("fetch");
 var page;
 var email;
 var password;
