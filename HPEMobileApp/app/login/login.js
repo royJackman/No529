@@ -51,8 +51,8 @@ exports.login = function() {
     }
     else if (email.text == "tim" && pword.text == "tim"){
         global.companyName = "Chaos"
-        topmost.navigate('home/home-page');
         global.queryStart = global.serverLink + "/systems/" + global.companyName
+        topmost.navigate('home/home-page');
     }
     else {
         alert({ title: "Invalid Credentials", message: "Incorrect Username or Password. Please try again.", okButtonText: "Close" });
