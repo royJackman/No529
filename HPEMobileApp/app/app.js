@@ -1,6 +1,8 @@
 require("./bundle-config");
 const application = require("application");
 
+global.serverLink = "https://hpbackend.localtunnel.me"
+
 application.start({ moduleName: "login/login" });
 
 /*
