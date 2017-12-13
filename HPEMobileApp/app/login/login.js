@@ -49,8 +49,13 @@ exports.login = function() {
         global.queryStart = global.serverLink + "/systems/" + global.companyName
         topmost.navigate('home/home-page');
     }
-    else if (email.text == "tim" && pword.text == "tim"){
+    else if (email.text == "tim@umass.edu" && pword.text == "tim"){
         global.companyName = "Chaos"
+        global.queryStart = global.serverLink + "/systems/" + global.companyName
+        topmost.navigate('home/home-page');
+    }
+    else if (email.text == "" && pword.text == "") {
+        global.companyName = "Frenzy"
         global.queryStart = global.serverLink + "/systems/" + global.companyName
         topmost.navigate('home/home-page');
     }
