@@ -9,6 +9,11 @@ var fetchModule = require("fetch");
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
 function onNavigatingTo(args) {
+
+    graph1Data()
+    graph2Data()
+    graph3Data()
+    graph4Data()
     /* ***********************************************************
     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
     * Skipping the re-initialization on back navigation means the user will see the
@@ -65,14 +70,14 @@ function graph1Data() {
             var jsn = JSON.parse(response._bodyText);
 
             for (i in jsn) {
-                serviceTime = JSON.stringify(jsn[i].performance_summary_portInfo_totalServiceTimeMillis);
-                readTime = JSON.stringify(jsn[i].performance_summary_portInfo_readServiceTimeMillis);
-                writeTime = JSON.stringify(jsn[i].performance_summary_portInfo_writeServiceTimeMillis);
-                var subArr = [serviceTime, readTime, writeTime];
+                var serviceTimeVal = JSON.stringify(jsn[i].performance_summary_portInfo_totalServiceTimeMillis);
+                var readTimeVal = JSON.stringify(jsn[i].performance_summary_portInfo_readServiceTimeMillis);
+                var writeTimeVal = JSON.stringify(jsn[i].performance_summary_portInfo_writeServiceTimeMillis);
+                var subArr = { serviceTime: serviceTimeVal, readTime: readTimeVal, writeTime: writeTimeVal };
                 retArr.push(subArr);
             }
 
-            //topmost.navigate('home/home-page');
+            console.log(retArr.toString());
 
         }, function (error) {
             console.log("error");
@@ -81,22 +86,19 @@ function graph1Data() {
 }
 
 function graph2Data() {
-    var rawArr = [];
-    var ssdArr = [];
+    var finalArr2 = []
     fetchModule.fetch(global.queryStart, { method: "GET" })
         .then(function (response) {
             var jsn = JSON.parse(response._bodyText);
 
             for (i in jsn) {
-                raw = JSON.stringify(jsn[i].capacity_total_freeTiB);
-                ssd = JSON.stringify(jsn[i].capacity_byType_ssd_freeTiB);
-
-                rawArr.push(raw);
-                ssdArr.push(ssd);
+                rawVal = JSON.stringify(jsn[i].capacity_total_freeTiB);
+                ssdVal = JSON.stringify(jsn[i].capacity_byType_ssd_freeTiB);
+                var tempDict = { raw: rawVal, ssd: ssdVal };
+                finalArr2.push(tempDict);
             }
 
-            var finalArr2 = [rawArr, ssdArr]
-            //topmost.navigate('home/home-page');
+            console.log(finalArr2.toString());
 
         }, function (error) {
             console.log("error");
@@ -105,23 +107,30 @@ function graph2Data() {
 }
 
 function graph3Data() {
-    var retDict = {};
+    var retDict = [];
     fetchModule.fetch(global.queryStart, {method: "GET"})
         .then(function (response) {
             var jsn = JSON.parse(response._bodyText);
 
+            var tempDict = {}
+
             for (i in jsn) {
                 country = JSON.stringify(jsn[i].location_country);
-                if (retDict[country] != undefined) {
-                    retDict[country] = retDict[country] + 1;
+
+                if (tempDict[country] != undefined) {
+                    tempDict[country] = tempDict[country] + 1;
                 }
                 else {
-                    retDict[country] = 1;
+                    tempDict[country] = 1;
                 }
 
             }
+            for (var key in tempDict) {
+                var littleDict = { country: key, count: tempDict[country] };
+                retDict.push(littleDict);
+            }
 
-            //topmost.navigate('home/home-page');
+            console.log(retDict.toString());
 
         }, function (error) {
             console.log("error");
@@ -130,21 +139,23 @@ function graph3Data() {
 }
 
 function graph4Data() {
-    var countArr = [];
-    var normalArr = [];
+    var finalArr4 = []
+
     fetchModule.fetch(global.queryStart, { method: "GET" })
         .then(function (response) {
             var jsn = JSON.parse(response._bodyText);
 
-            for (i in jsn) {
-                count = JSON.stringify(jsn[i].disks_total_diskCount);
-                normal = JSON.stringify(jsn[i].disks_total_diskCountNormal);
 
-                countArr.push(count);
-                normalArr.push(normal);
+
+            for (i in jsn) {
+                countVal = JSON.stringify(jsn[i].disks_total_diskCount);
+                normalVal = JSON.stringify(jsn[i].disks_total_diskCountNormal);
+
+                var tempDict = { count: countVal, normal: normalVal };
+                finalArr4.push(tempDict)
             }
 
-            var finalArr4 = [countArr, normalArr]
+            console.log(finalArr4.toString());
 
             //topmost.navigate('home/home-page');
 

@@ -92,7 +92,7 @@
                             items="{{ retDict }}"
                             outerRadiusFactor="1"
                             valueProperty="count"
-                            legendLabel="generation"
+                            legendLabel="country"
                             showLabels="true">
                             </chart:PieSeries>
                         </chart:RadPieChart.series>
