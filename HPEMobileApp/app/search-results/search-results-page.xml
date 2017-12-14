@@ -57,13 +57,20 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout class="page-content" rows="auto" columns="*">
-                <Button class="page-newSearch-button but" text="New Search" tap="newSearch" row="0" />
-                <!--<ListView class="page-search-results" items="{{ searchResults }}" id="searchResults" row="1" colSpan="2">
+            <GridLayout class="page-content" rows="auto,auto,*" columns="*,*">
+                <Button class="page-newSearch-button but" text="New Search" tap="newSearch" row="0" col="0"/>
+                <Button class="page-newSearch-button but" text="Edit Search" tap="editSearch" row="0" col="1"/>
+                <Label class="list-label" text="System Name" row="1" col="0"/>
+                <Label class="list-label" text="Serial Number" row="1" col="1"/>
+                <ListView class="page-search-results" items="{{ list }}" id="list" row="2" colSpan="2">
                     <ListView.itemTemplate>
-                        <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+                        <GridLayout class="list-item" columns="*,*">
+                            <Label class="list-item-info" text="{{ system.systemName }}" col="0" tap="{{ detailedView }}"/>
+                            <Label class="list-item-info" text="{{ system.serialNumber }}" col="1" tap="{{ detailedView }}"/>
+                        </GridLayout>
                     </ListView.itemTemplate>
-                </ListView>-->
+                </ListView>
+                <ActivityIndicator busy="{{ isLoading }}" row="2" colSpan="2" />
             </GridLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
