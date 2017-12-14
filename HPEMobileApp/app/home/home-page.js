@@ -171,5 +171,8 @@ exports.hpeParModelButton = hpeParModelButton;
 exports.lastPortalButton = lastPortalButton;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.graph1Data = graph3Data;
+exports.graph2Data = graph3Data;
 exports.graph3Data = graph3Data;
+exports.graph4Data = graph3Data;
 
