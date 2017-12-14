@@ -33,15 +33,19 @@ function onNavigatingTo(args) {
  * use the showDrawer() function to open the app drawer section.
  *************************************************************/
 
+function onDrawerButtonTap(args) {
+    const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
+    sideDrawer.showDrawer();
+}
+
 function back(){
     var navigationEntry = {
         moduleName: "configuration/configuration-page",
-        context: systemGraph.system
+        context: systemGraphs.system
     };
     frameModule.topmost().navigate(navigationEntry);
 }
  
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
-exports.newSearch = newSearch;
-exports.editSearch = editSearch;
+exports.back = back;

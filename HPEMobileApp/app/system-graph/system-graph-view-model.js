@@ -21,9 +21,9 @@ function SystemGraphViewModel() {
     };
 
     viewModel.buildGraph1 = function(){
-        viewModel.graph1 = [{key: "Normal", value: viewModel.system.diskCountNormal},
-                            {key: "Degraded", value: viewModel.system.diskCountDegraded},
-                            {key: "Failed", value: viewModel.system.diskCountFailed}]
+        viewModel.graph1 = [{key: "Normal", value: viewModel.system.disks_total_diskCountNormal},
+                            {key: "Degraded", value: viewModel.system.disks_total_diskCountDegraded},
+                            {key: "Failed", value: viewModel.system.disks_total_diskCountFailed}]
     };
 
     viewModel.buildGraph2 = function(){

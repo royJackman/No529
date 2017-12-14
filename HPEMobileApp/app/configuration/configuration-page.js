@@ -113,7 +113,7 @@ function viewGraphs(args){
     frameModule.topmost().navigate(navigationEntry);
 }
 
-
+exports.viewGraphs = viewGraphs;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 exports.backToList=backToList;
