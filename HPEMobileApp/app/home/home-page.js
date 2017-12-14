@@ -32,9 +32,9 @@ function onDrawerButtonTap(args) {
 }
 
 function avgGraphButton(args) {
-    //var topmost = frameModule.topmost();
-    //topmost.navigate("graph/avgGraph-page");
-    graph4Data()
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/avgGraph-page");
+    //graph4Data()
 }
 
 function histCapButton(args) {
