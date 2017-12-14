@@ -71,7 +71,66 @@
           <TabViewItem.view>
             <StackLayout>
                 <Label text="One" android:class="android-label" ios:class="ios-label"/>
-                <GridLayout columns="*,*" rows="*,*,*,*,*" ios:class="layout-container" android:class="android-layout-container">
+                <GridLayout columns="*,*" rows="*,*,*,*" ios:class="layout-container" android:class="android-layout-container">
+                    <chart:RadCartesianChart id="cartesianChart" rowSpan="2">
+                        <chart:RadCartesianChart.series>
+                            <chart:SplineSeries items="{{ retArr }}" categoryProperty="key" valueProperty="value" tap="avgGraphButton">
+                                <chart:SplineSeries.horizontalAxis>
+                                    <chart:CategoricalAxis/>
+                                </chart:SplineSeries.horizontalAxis>
+                                <chart:SplineSeries.verticalAxis>
+                                    <chart:LinearAxis/>
+                                </chart:SplineSeries.verticalAxis>
+                            </chart:SplineSeries>
+                        </chart:RadCartesianChart.series>
+                    </chart:RadCartesianChart>
+                    <chart:RadPieChart row="2" rowspan="2">
+                        <chart:RadPieChart.series>
+                            <chart:PieSeries
+                            selectionMode="DataPoint"
+                            items="{{ retDict }}"
+                            outerRadiusFactor="1"
+                            valueProperty="count"
+                            legendLabel="generation"
+                            showLabels="true">
+                            </chart:PieSeries>
+                        </chart:RadPieChart.series>
+                        <chart:RadPieChart.legend>
+                            <chart:RadLegendView
+                            position="Right"
+                            width="120" />
+                        </chart:RadPieChart.legend>
+                    </chart:RadPieChart>
+                    <chart:RadCartesianChart class="m-t-10" col="1" rowspan="2">
+                        <chart:RadCartesianChart.series>
+                            <chart:LineSeries
+                            items="{{ finalArr2 }}"
+                            categoryProperty="season"
+                            valueProperty="count">
+                            <chart:LineSeries.horizontalAxis>
+                                <chart:CategoricalAxis labelFitMode="Rotate" />
+                            </chart:LineSeries.horizontalAxis>
+                            <chart:LineSeries.verticalAxis>
+                                <chart:LinearAxis labelLayoutMode="Outer" />
+                            </chart:LineSeries.verticalAxis>
+                            </chart:LineSeries>
+                        </chart:RadCartesianChart.series>
+                    </chart:RadCartesianChart>
+                    <chart:RadCartesianChart class="m-t-10" col="1" row="2" rowspan="2">
+                        <chart:RadCartesianChart.series>
+                            <chart:LineSeries
+                            items="{{ finalArr4 }}"
+                            categoryProperty="season"
+                            valueProperty="count">
+                            <chart:LineSeries.horizontalAxis>
+                                <chart:CategoricalAxis labelFitMode="Rotate" />
+                            </chart:LineSeries.horizontalAxis>
+                            <chart:LineSeries.verticalAxis>
+                                <chart:LinearAxis labelLayoutMode="Outer" />
+                            </chart:LineSeries.verticalAxis>
+                            </chart:LineSeries>
+                        </chart:RadCartesianChart.series>
+                    </chart:RadCartesianChart>
                     <Button text="Avg Graph" id="1btn-blue" rowSpan="2" class="btn-blue" tap="avgGraphButton"/>
                     <Button text="Historical Cap" id="1btn-lightblue" col="1" rowSpan="4" class="btn-lightblue" tap="histCapButton"/>
                     <Button text="HPE 3PAR Model" id="1btn-red" col="0" row="2" class="btn-red" tap="hpeParModelButton"/>

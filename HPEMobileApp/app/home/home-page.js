@@ -71,6 +71,7 @@ function graph1Data() {
                 retArr.push(subArr);
             }
 
+
             //Hey Roy how ya doing today
             //Well because of these annoying ass promises call ur graph function right here
             //use retArr
