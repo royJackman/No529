@@ -1,5 +1,6 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
+const frameModule = require("ui/frame");
 var fetchModule = require("fetch");
 
 function SearchResultsListViewModel() {
@@ -18,8 +19,7 @@ function SearchResultsListViewModel() {
                 detailedView: function(){
                     var navigationEntry = {
                         moduleName: "configuration/configuration-page",
-                        context: sys,
-                        animated: false
+                        context: sys
                     };
                     frameModule.topmost().navigate(navigationEntry);
                 }

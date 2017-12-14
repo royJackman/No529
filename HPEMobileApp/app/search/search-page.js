@@ -38,8 +38,7 @@ function onSearchTap(){
     search.makeObject();
     var navigationEntry = {
         moduleName: "search-results/search-results-page",
-        context: search.objectRepresentation, 
-        animated: false
+        context: search.objectRepresentation
     };
     frameModule.topmost().navigate(navigationEntry);
 }

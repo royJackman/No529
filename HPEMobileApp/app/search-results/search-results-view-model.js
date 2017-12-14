@@ -24,9 +24,12 @@ function SearchResultsViewModel() {
             method: "GET"
         }).then(
             function (res) {
+                console.log("Recieved response from server");                
                 viewModel.results = JSON.parse(res._bodyText);
-                console.log(viewModel.results);
-                if(viewModel.results != 404){
+                if(viewModel.results == 404){
+                    alert({ title: "Cannot connect to server", message: searchResult.results, okButtonText: "Close" });
+                    searchResult.clearRequest();
+                }else{
                     viewModel.list.fill(viewModel.results);
                 }
             }, 
