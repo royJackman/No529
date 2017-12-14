@@ -32,9 +32,9 @@ function onDrawerButtonTap(args) {
 }
 
 function avgGraphButton(args) {
-    var topmost = frameModule.topmost();
-    topmost.navigate("graph/avgGraph-page");
-    //graph3Data()
+    //var topmost = frameModule.topmost();
+    //topmost.navigate("graph/avgGraph-page");
+    graph4Data()
 }
 
 function histCapButton(args) {
@@ -56,28 +56,24 @@ function lastPortalButton(args) {
 
 
 
-function graph3Data() {
-    var retDict = {};
-    fetchModule.fetch(global.queryStart, {method: "GET"})
+
+function graph1Data() {
+    var retArr = [];
+    fetchModule.fetch(global.queryStart, { method: "GET" })
         .then(function (response) {
             var jsn = JSON.parse(response._bodyText);
 
             for (i in jsn) {
-                console.log("t")
-                country = JSON.stringify(jsn[i].location_country);
-                console.log(country)
-                if (retDict[country] != undefined) {
-                    retDict[country] = retDict[country] + 1;
-                }
-                else {
-                    retDict[country] = 1;
-                }
-                console.log(JSON.stringify(retDict))
-
+                serviceTime = JSON.stringify(jsn[i].performance_summary_portInfo_totalServiceTimeMillis);
+                readTime = JSON.stringify(jsn[i].performance_summary_portInfo_readServiceTimeMillis);
+                writeTime = JSON.stringify(jsn[i].performance_summary_portInfo_writeServiceTimeMillis);
+                var subArr = [serviceTime, readTime, writeTime];
+                retArr.push(subArr);
             }
 
             //Hey Roy how ya doing today
             //Well because of these annoying ass promises call ur graph function right here
+            //use retArr
 
         }, function (error) {
             console.log("error");
@@ -85,7 +81,86 @@ function graph3Data() {
 
 }
 
+function graph2Data() {
+    var rawArr = [];
+    var ssdArr = [];
+    fetchModule.fetch(global.queryStart, { method: "GET" })
+        .then(function (response) {
+            var jsn = JSON.parse(response._bodyText);
 
+            for (i in jsn) {
+                raw = JSON.stringify(jsn[i].capacity_total_freeTiB);
+                ssd = JSON.stringify(jsn[i].capacity_byType_ssd_freeTiB);
+
+                rawArr.push(raw);
+                ssdArr.push(ssd);
+            }
+
+            var finalArr2 = [rawArr, ssdArr]
+
+            //Hey Roy how ya doing today
+            //Well because of these annoying ass promises call ur graph function right here
+            //use finalArr2
+
+        }, function (error) {
+            console.log("error");
+        })
+
+}
+
+function graph3Data() {
+    var retDict = {};
+    fetchModule.fetch(global.queryStart, {method: "GET"})
+        .then(function (response) {
+            var jsn = JSON.parse(response._bodyText);
+
+            for (i in jsn) {
+                country = JSON.stringify(jsn[i].location_country);
+                if (retDict[country] != undefined) {
+                    retDict[country] = retDict[country] + 1;
+                }
+                else {
+                    retDict[country] = 1;
+                }
+
+            }
+
+            //Hey Roy how ya doing today
+            //Well because of these annoying ass promises call ur graph function right here
+            //use retDict
+
+        }, function (error) {
+            console.log("error");
+        })
+
+}
+
+function graph4Data() {
+    var countArr = [];
+    var normalArr = [];
+    fetchModule.fetch(global.queryStart, { method: "GET" })
+        .then(function (response) {
+            var jsn = JSON.parse(response._bodyText);
+
+            for (i in jsn) {
+                count = JSON.stringify(jsn[i].disks_total_diskCount);
+                normal = JSON.stringify(jsn[i].disks_total_diskCountNormal);
+
+                countArr.push(count);
+                normalArr.push(normal);
+            }
+
+            var finalArr4 = [countArr, normalArr]
+
+            //Hey Roy how ya doing today
+            //Well because of these annoying ass promises call ur graph function right here
+            //use finalArr4
+
+        }, function (error) {
+            console.log("error");
+        })
+
+}
 
 
 
