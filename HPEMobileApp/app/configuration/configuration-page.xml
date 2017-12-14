@@ -57,9 +57,10 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout class="page-content" rows="auto,*">
-                <Button class="page-button" text="Back to list" tap="backToList" row="0" colSpan="2"></Button> 
-                <ListView class="system-info" items="{{ list }}" id="list" row="2">
+            <GridLayout class="page-content" rows="auto,*" columns="*,*">
+                <Button class="page-button" text="Back to list" tap="backToList" row="0" col="0"></Button> 
+                <Button class="page-button" text="View Graphs" tap="viewGraphs" row="0" col="1"></Button> 
+                <ListView class="system-info" items="{{ list }}" id="list" row="2" colSpan="2">
                     <ListView.itemTemplate>
                         <GridLayout class="list-item" columns="*,*">
                             <Label class="list-item-info" text="{{ label }}" col="0"/>

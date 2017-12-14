@@ -96,10 +96,19 @@ function onDrawerButtonTap(args) {
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
+
 function backToList(args){
 	var navigationEntry = {
 		moduleName :"search-results/search-results-page",
-        context: "Back",
+        context: "Back"
+	};
+    frameModule.topmost().navigate(navigationEntry);
+}
+
+function viewGraphs(args){
+	var navigationEntry = {
+		moduleName :"system-graph/system-graph-page",
+        context: configuration.system
 	};
     frameModule.topmost().navigate(navigationEntry);
 }
