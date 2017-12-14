@@ -26,9 +26,9 @@ function SearchResultsViewModel() {
             function (res) {
                 console.log("Recieved response from server");                
                 viewModel.results = JSON.parse(res._bodyText);
-                if(viewModel.results == 404){
-                    alert({ title: "Cannot connect to server", message: searchResult.results, okButtonText: "Close" });
-                    searchResult.clearRequest();
+                if(viewModel.results == "404"){
+                    alert({ title: "Cannot connect to server", okButtonText: "Close" });
+                    viewModel.clearRequest();
                 }else{
                     viewModel.list.fill(viewModel.results);
                 }
