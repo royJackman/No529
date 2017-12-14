@@ -73,6 +73,11 @@ function onNavigatingTo(args) {
                     performance_summary_vvInfo_vvsByType_ssd_writeServiceTimeMillis: "SSD Write Service Time:", 
                     nodes_cpuAvgMax: "Max Avg CPU Util:"};
     
+    //Empty Observable array to make room for new info
+    while (configurationList.length) {
+        configurationList.pop();
+    }
+
     //Fills the Observable array with information needed for display
     for(var key in labels){
         configurationList.push({

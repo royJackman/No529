@@ -5,7 +5,7 @@ var fetchModule = require("fetch");
 function SearchResultsViewModel() {
     const viewModel = observableModule.fromObject({
         searchFields: null,
-        httpRequest: "https://hpbackend.localtunnel.me/systems/Frenzy",
+        httpRequest: global.queryStart,
         results: null,
         list: null
     });
@@ -16,7 +16,7 @@ function SearchResultsViewModel() {
     };
 
     viewModel.clearRequest = function(){
-        viewModel.httpRequest = "https://hpbackend.localtunnel.me/systems/Frenzy";
+        viewModel.httpRequest = global.queryStart;
     }
 
     viewModel.getSearchResults = function(){

@@ -22,15 +22,17 @@ function onNavigatingTo(args) {
         return;
     }
 
-    //This checks if we are returning from viewing a system's info. We want to display what we already found.
-    if(args.context == "Back") {
-        return;
-    }
+    
 
     searchResult.list = searchResultList;
 
     const page = args.object;    
     page.bindingContext = searchResult;
+
+    //This checks if we are returning from viewing a system's info. We want to display what we already found.
+    if(args.context == "Back") {
+        return;
+    }
 
     searchResult.searchFields = args.context;
 
@@ -72,9 +74,9 @@ function buildhttpRequest() {
     var first = true;
     searchResult.httpRequest += "/";
     for (var key in searchResult.searchFields){
-        if(searchResult.searchFields.hasOwnProperty(key) && searchResult.searchFields[key] != null){
+        if(searchResult.searchFields.hasOwnProperty(key) && searchResult.searchFields[key] != null && searchResult.searchFields[key] != ""){
             if(first){
-                searchResult.httpRequest += "/search?";
+                searchResult.httpRequest += "search?";
                 first = false;
             }else{
                 searchResult.httpRequest += "&";

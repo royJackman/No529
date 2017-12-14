@@ -3,7 +3,6 @@ const observableModule = require("data/observable");
 function SearchViewModel() {
     const viewModel = observableModule.fromObject({
         systemName: null,
-        companyName: null,
         serialNumber: null,
         productFamily: null,
         model: null,
@@ -15,7 +14,6 @@ function SearchViewModel() {
 
     viewModel.empty = function() {
         viewModel.systemName = null;
-        viewModel.companyName = null;
         viewModel.serialNumber = null;
         viewModel.productFamily = null;
         viewModel.model = null;
@@ -28,7 +26,6 @@ function SearchViewModel() {
     viewModel.makeObject = function() {
         viewModel.objectRepresentation = {
             systemName: viewModel.systemName,
-            companyName: viewModel.companyName,
             serialNumber: viewModel.serialNumber,
             productFamily: viewModel.productFamily,
             model: viewModel.model,

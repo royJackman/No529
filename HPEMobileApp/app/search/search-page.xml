@@ -63,10 +63,6 @@
                     <Label class="search-field-label" text="System Name:" col="0" /> 
                     <TextField class="search-field" text="{{ systemName }}" hint="e.g. My System" col="1" />
                 </GridLayout>
-                <GridLayout class="search-item" row="2" columns="auto, *" >
-                    <Label class="search-field-label" text="Company:" col="0" /> 
-                    <TextField class="search-field" text="{{ companyName }}" hint="e.g. Hewlett Packard Enterprise" col="1" />
-                </GridLayout>
                 <GridLayout class="search-item" row="3" columns="auto, *" >
                     <Label class="search-field-label" text="Serial #:" col="0" /> 
                     <TextField class="search-field" text="{{ serialNumber }}" hint="e.g. 1234" col="1" />
