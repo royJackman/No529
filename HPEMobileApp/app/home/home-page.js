@@ -1,6 +1,7 @@
 const frameModule = require("ui/frame");
 
 const HomeViewModel = require("./home-view-model");
+//const LoginViewModel = require("./login-view-model");
 
 var fetchModule = require("fetch");
 
@@ -71,10 +72,7 @@ function graph1Data() {
                 retArr.push(subArr);
             }
 
-
-            //Hey Roy how ya doing today
-            //Well because of these annoying ass promises call ur graph function right here
-            //use retArr
+            //topmost.navigate('home/home-page');
 
         }, function (error) {
             console.log("error");
@@ -98,10 +96,7 @@ function graph2Data() {
             }
 
             var finalArr2 = [rawArr, ssdArr]
-
-            //Hey Roy how ya doing today
-            //Well because of these annoying ass promises call ur graph function right here
-            //use finalArr2
+            //topmost.navigate('home/home-page');
 
         }, function (error) {
             console.log("error");
@@ -126,9 +121,7 @@ function graph3Data() {
 
             }
 
-            //Hey Roy how ya doing today
-            //Well because of these annoying ass promises call ur graph function right here
-            //use retDict
+            //topmost.navigate('home/home-page');
 
         }, function (error) {
             console.log("error");
@@ -153,9 +146,7 @@ function graph4Data() {
 
             var finalArr4 = [countArr, normalArr]
 
-            //Hey Roy how ya doing today
-            //Well because of these annoying ass promises call ur graph function right here
-            //use finalArr4
+            //topmost.navigate('home/home-page');
 
         }, function (error) {
             console.log("error");
@@ -172,8 +163,8 @@ exports.hpeParModelButton = hpeParModelButton;
 exports.lastPortalButton = lastPortalButton;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
-exports.graph1Data = graph3Data;
-exports.graph2Data = graph3Data;
+exports.graph1Data = graph1Data;
+exports.graph2Data = graph2Data;
 exports.graph3Data = graph3Data;
-exports.graph4Data = graph3Data;
+exports.graph4Data = graph4Data;
 

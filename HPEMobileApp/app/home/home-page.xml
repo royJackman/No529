@@ -1,6 +1,7 @@
-<Page
+7<Page
     class="page"
     navigatingTo="onNavigatingTo"  
+    xmlns:chart="nativescript-pro-ui/chart"
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd">
