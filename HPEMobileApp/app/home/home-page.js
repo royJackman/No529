@@ -32,9 +32,9 @@ function onDrawerButtonTap(args) {
 }
 
 function avgGraphButton(args) {
-    //var topmost = frameModule.topmost();
-    //topmost.navigate("graph/avgGraph-page");
-    graph4Data()
+    var topmost = frameModule.topmost();
+    topmost.navigate("graph/avgGraph-page");
+    //graph4Data()
 }
 
 function histCapButton(args) {
@@ -172,5 +172,8 @@ exports.hpeParModelButton = hpeParModelButton;
 exports.lastPortalButton = lastPortalButton;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.graph1Data = graph3Data;
+exports.graph2Data = graph3Data;
 exports.graph3Data = graph3Data;
+exports.graph4Data = graph3Data;
 
