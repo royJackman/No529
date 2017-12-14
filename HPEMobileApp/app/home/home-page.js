@@ -2,6 +2,8 @@ const frameModule = require("ui/frame");
 
 const HomeViewModel = require("./home-view-model");
 
+var fetchModule = require("fetch");
+
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
@@ -32,6 +34,7 @@ function onDrawerButtonTap(args) {
 function avgGraphButton(args) {
     var topmost = frameModule.topmost();
     topmost.navigate("graph/avgGraph-page");
+    //graph3Data()
 }
 
 function histCapButton(args) {
@@ -49,9 +52,49 @@ function lastPortalButton(args) {
     topmost.navigate("graph/lastPortal-page");
 }
 
+
+
+
+
+function graph3Data() {
+    var retDict = {};
+    fetchModule.fetch(global.queryStart, {method: "GET"})
+        .then(function (response) {
+            var jsn = JSON.parse(response._bodyText);
+
+            for (i in jsn) {
+                console.log("t")
+                country = JSON.stringify(jsn[i].location_country);
+                console.log(country)
+                if (retDict[country] != undefined) {
+                    retDict[country] = retDict[country] + 1;
+                }
+                else {
+                    retDict[country] = 1;
+                }
+                console.log(JSON.stringify(retDict))
+
+            }
+
+            //Hey Roy how ya doing today
+            //Well because of these annoying ass promises call ur graph function right here
+
+        }, function (error) {
+            console.log("error");
+        })
+
+}
+
+
+
+
+
+
 exports.avgGraphButton = avgGraphButton;
 exports.histCapButton = histCapButton;
 exports.hpeParModelButton = hpeParModelButton;
 exports.lastPortalButton = lastPortalButton;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.graph3Data = graph3Data;
+
