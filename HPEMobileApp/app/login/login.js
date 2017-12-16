@@ -98,9 +98,8 @@ function generateGraphsAndNav() {
 
         }, function (error) {
             console.log("error");
-            var t = topmost.navigate('home/home-page');
+            topmost.navigate('home/home-page');
         })
-    topmost.navigate('home/home-page');
 }
 
 exports.onNavigatingTo = onNavigatingTo;
