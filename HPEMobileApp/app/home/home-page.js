@@ -10,10 +10,6 @@ var fetchModule = require("fetch");
 *************************************************************/
 function onNavigatingTo(args) {
 
-    graph1Data()
-    graph2Data()
-    graph3Data()
-    graph4Data()
     /* ***********************************************************
     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
     * Skipping the re-initialization on back navigation means the user will see the

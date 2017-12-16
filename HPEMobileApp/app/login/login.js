@@ -1,6 +1,8 @@
 const frameModule = require("ui/frame");
 const LoginViewModel = require("./login-view-model");
 
+var fetchModule = require("fetch");
+
 var page;
 var email;
 var password;
@@ -32,8 +34,78 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+function generateGraphsAndNav() {
+
+    var topmost = frameModule.topmost();
+
+    var graph1 = [];
+    var graph2 = [];
+    var graph3 = [];
+    var graph4 = [];
+
+    fetchModule.fetch(global.queryStart, { method: "GET" })
+        .then(function (response) {
+            var jsn = JSON.parse(response._bodyText);
+
+            //graph1
+            for (i in jsn) {
+                var serviceTimeVal = JSON.stringify(jsn[i].performance_summary_portInfo_totalServiceTimeMillis);
+                var readTimeVal = JSON.stringify(jsn[i].performance_summary_portInfo_readServiceTimeMillis);
+                var writeTimeVal = JSON.stringify(jsn[i].performance_summary_portInfo_writeServiceTimeMillis);
+                var subArr = { serviceTime: serviceTimeVal, readTime: readTimeVal, writeTime: writeTimeVal };
+                graph1.push(subArr);
+            }
+
+            //graph2
+            for (i in jsn) {
+                var rawVal = JSON.stringify(jsn[i].capacity_total_freeTiB);
+                var ssdVal = JSON.stringify(jsn[i].capacity_byType_ssd_freeTiB);
+                var tempDict = { raw: rawVal, ssd: ssdVal };
+                graph2.push(tempDict);
+            }
+
+            //graph3
+            var tempDict = {}
+            for (i in jsn) {
+                var country = JSON.stringify(jsn[i].location_country);
+                if (tempDict[country] != undefined) {
+                    tempDict[country] = tempDict[country] + 1;
+                }
+                else {
+                    tempDict[country] = 1;
+                }
+            }
+            for (var key in tempDict) {
+                var littleDict = { country: key, count: tempDict[country] };
+                graph3.push(littleDict);
+            }
+
+            //graph4
+            for (i in jsn) {
+                var countVal = JSON.stringify(jsn[i].disks_total_diskCount);
+                var normalVal = JSON.stringify(jsn[i].disks_total_diskCountNormal);
+
+                var tempDict = { count: countVal, normal: normalVal };
+                graph3.push(tempDict)
+            }
+
+            global.g1 = graph1;
+            global.g2 = graph2;
+            global.g3 = graph3;
+            global.g4 = graph4;
+
+            topmost.navigate('home/home-page');
+
+        }, function (error) {
+            console.log("error");
+            var t = topmost.navigate('home/home-page');
+        })
+    topmost.navigate('home/home-page');
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.generateGraphsAndNav = generateGraphsAndNav;
 
 exports.loaded = function(args) {
     page = args.object;
@@ -47,17 +119,20 @@ exports.login = function() {
     if (email.text == "gordon@umass.edu" && pword.text == "packers") {
         global.companyName = "Frenzy"
         global.queryStart = global.serverLink + "/systems/" + global.companyName
-        topmost.navigate('home/home-page');
+        generateGraphsAndNav()
+        //topmost.navigate('home/home-page');
     }
     else if (email.text == "tim@umass.edu" && pword.text == "tim"){
         global.companyName = "Chaos"
         global.queryStart = global.serverLink + "/systems/" + global.companyName
-        topmost.navigate('home/home-page');
+        generateGraphsAndNav()
+        //topmost.navigate('home/home-page');
     }
     else if (email.text == "" && pword.text == "") {
         global.companyName = "Frenzy"
         global.queryStart = global.serverLink + "/systems/" + global.companyName
-        topmost.navigate('home/home-page');
+        generateGraphsAndNav()
+        //topmost.navigate('home/home-page');
     }
     else {
         alert({ title: "Invalid Credentials", message: "Incorrect Username or Password. Please try again.", okButtonText: "Close" });
